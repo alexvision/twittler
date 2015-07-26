@@ -1,0 +1,14 @@
+.tweets {
+	display: inline-block;
+	float: right;
+	width: 500px;
+}
+
+.hidden {
+	display: none;
+}
+
+.user {
+	color: blue;
+	text-decoration: underline;
+}
