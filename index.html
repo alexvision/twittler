@@ -10,15 +10,30 @@
       $(document).ready(function(){
         var $body = $('body');
         $body.html('');
+        $body.prepend('<h1>Twittler</h1>');
+        $body.append('<button id="refresh">Refresh</button>');
 
+        var addTweet = function(index){
+          var tweet = streams.home[index];
+          var $tweet = $('<div class="tweet"></div>');
+          //var date = new Date(Date.now());
+          $tweet.text('@' + tweet.user + ': ' + tweet.message  + " " + Date.now());//date.toLocaleString());
+          return $tweet;
+        };
+        
         var index = streams.home.length - 1;
         while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          addTweet(index).appendTo($body);
           index -= 1;
         }
+
+        $('#refresh').on ('click', function(){
+          var displayedTweetCount = $('.tweet').length - 1;
+          for(var i = displayedTweetCount; i < streams.home.length; i++){
+            //$body.prepend(addTweet(i));
+            addTweet(i).insertAfter('#refresh')
+          }
+        });
 
       });
 
