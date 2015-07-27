@@ -49,5 +49,7 @@ button:hover {
 
 .user {
 	font-weight: bold;
+}
+.user:hover{
 	text-decoration: underline;
 }
