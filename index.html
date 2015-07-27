@@ -14,7 +14,7 @@
         var $tweets = $('.tweets');
         $body.html('');
         $body.append('<header><h1 id="title">Twittler</h1>');
-        $body.append('<button id="refresh">More Recent Tweets</button></header>');
+        $body.append('<button id="refresh">More Tweets</button></header>');
         $body.append('<div class="tweets"></div>')
 
         var addTweet = function(index){
@@ -29,7 +29,6 @@
           $message.text(tweet.message).appendTo($tweet);
           $date.text(Date.now()).appendTo($tweet);
 
-          //$tweet.text('@' + tweet.user + ': ' + tweet.message  + ' ' + Date.now());
           return $tweet;
         };
         
@@ -48,7 +47,7 @@
           }
         });
 
-        $('.tweet').on ('click', '.user', function(){
+        $('body').on ('click', '.user', function(){
           var id = $(this).attr('id')
           
           $(".user").each(function(){

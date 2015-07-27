@@ -1,7 +1,46 @@
-.tweets {
-	display: inline-block;
-	float: right;
+body{
+	line-height:1.6;
+	font-size:18px;
+	font-family: helvetica neue, sans-serif; 
+	color:#444;
+	padding:0 10px;
 	width: 500px;
+  	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+h1{
+	line-height:1.2
+}
+
+button {
+	font-size: 0.9em;
+	color:#1a1a1a;
+	background-color: #FFFFFF;
+	border: 1px solid #E76049;
+	border-radius: 8px;
+	padding: 0.5em;
+	margin-bottom: 3%;
+}
+
+button:hover {
+	background-color: #E76049;
+	color: #FFFFFF;
+}
+
+.tweets {
+	width: 500px;
+  	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+.tweet {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background: #eee;
+	border-bottom-style: solid;
+	border-bottom-color: #fff;
+	border-radius: 3px;
 }
 
 .hidden {
@@ -9,6 +48,6 @@
 }
 
 .user {
-	color: blue;
+	font-weight: bold;
 	text-decoration: underline;
 }
