@@ -38,7 +38,6 @@
           index -= 1;
         }
 
-        $body.append('</div>');
         $('#refresh').on ('click', function(){
           var displayedTweetCount = $('.tweet').length - 1;
           for(var i = displayedTweetCount; i < streams.home.length; i++){
@@ -49,7 +48,7 @@
 
         $('body').on ('click', '.user', function(){
           var id = $(this).attr('id')
-          
+          $('#refresh').toggleClass('hidden');
           $(".user").each(function(){
             if($(this).attr('id') !== id){
               $(this).closest('.tweet').toggleClass('hidden');
